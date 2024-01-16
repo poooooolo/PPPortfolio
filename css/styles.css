@@ -1,0 +1,351 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+/*variables principales para el modo normal*/
+
+:root{
+	--text-color:#030bff;
+	--text-colorB:white;
+	--background-color:#030bff;
+	--background-colorB:#030bff;
+	--main-background-color:white;
+	--shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*para cuando se active el modo oscuro y cambiará de las variables del root a estas*/
+
+.dark-mode{
+	--background-color:black;
+	--background-colorB:white;
+	--main-background-color:black;
+	--text-color:white;
+	--text-colorB:black;
+	--shadow:0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--main-background-color);
+}
+
+/*estilo primera pantalla*/
+
+.portada,
+.aparece{
+	background-color: var(--background-color);
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+/*estilos después de la cuenta atrás*/
+
+.portada h1{
+	font-family: "Handjet";
+    font-size: 12em;
+    font-weight: 500;
+    color: white;
+}
+.portada p{
+	font-family: "Handjet";
+    font-size: 3em;
+    font-weight: 500;
+    color: white;
+}
+
+/*cuando se termina la cuenta atrás, esta clase se activa
+para la portada*/
+
+.aparece{
+	display:none;
+	background-color: var(--main-background-color);
+}
+
+/*esta caja está hecha sobre todo para el java, lo ideal sería que esta no 
+existiese y tener solo el body pero sino no puedo tener la primera pantalla*/
+
+main{
+	width: 90%;
+}
+
+header{/*para organizar el contenido del header h1+nav*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.encabezado{
+	font-size: 5em;
+    font-family: 'Handjet';
+    color: var(--text-color);
+    letter-spacing: 6px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+}
+
+.encabezado button{
+	-webkit-appearance: none;
+    appearance: none;
+    border: none;
+    background: transparent;
+    width: 20px;
+    margin-left: 10px;
+}
+
+nav ul,
+nav a{/*para los enlaces del nav*/
+	width: 100%;
+	display: flex;
+	list-style: none;
+}
+
+nav a{/*para los enlaces del nav*/
+	display:block;
+	padding: 10px 10px;
+	text-decoration: none;
+	font-family:"Sofia Sans Extra Condensed";
+	font-size: 1.3em;
+	color:var(--text-color);
+}
+
+.pruebas a{/*para todos los enlaces de pruebas*/
+	text-decoration: none;
+	font-family: "Handjet";
+	font-weight: 500;
+	font-size: 1.4em;
+	padding: 10px;
+  	background-color: var(--background-colorB);
+  	color: var(--text-colorB);
+  	width: 60%;
+}
+
+.caja-intro{
+	box-shadow: var(--shadow);
+}
+
+.titulo-intro{
+	font-size: 1.7em;
+	font-family: "Bebas Neue";
+	color: var(--text-color);
+	padding: 15px;
+}
+
+.intro p{
+	font-size: 1.3em;
+	color:var(--text-color);
+	font-family: "Sofia Sans Extra Condensed";
+	padding: 0 10px 10px;/*padding menos arriba*/
+}
+
+.pruebas{
+	display: grid; 
+	align-items: start;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(6, auto);
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.pruebas p{
+	font-size: 1.3em;
+	color:var(--text-color);
+	font-family: "Sofia Sans Extra Condensed";
+}
+
+.pruebas img{/*todas las imgs*/
+	width: 130px;
+}
+
+/*disposición del contenido del grid*/
+
+.titulo-pruebas{
+	font-size: 1.7em;
+	font-family: "Bebas Neue";
+	color: var(--text-color);
+	grid-column: 1 / 5;
+	grid-row: 1 / 2;
+}
+.texto-pruebas{
+	grid-column: 1 / 5;
+	grid-row: 2 / 3;
+}
+.texto-florence{
+	grid-column: 1 / 2;
+	grid-row: 4 / 5;
+}
+.img1{
+	grid-column: 2 / 3;
+	grid-row: 3 / 5;
+}
+.texto-FC{
+	grid-column: 3 / 4;
+	grid-row: 4 / 5;
+}
+.img2{
+	grid-column: 4 / 5;
+	grid-row: 3 / 5;
+}
+.texto-MP{
+	grid-column: 1 / 2;
+	grid-row: 6 / 7;
+}
+.img3{
+	grid-column: 2 / 3;
+	grid-row: 5 / 7;
+}
+.texto-cuadrados{
+	grid-column: 3 / 4;
+	grid-row: 6 / 7;
+}
+.img4{
+	grid-column: 4 / 5;
+	grid-row: 5 / 7;
+}
+.contacto{
+	height: 110px;
+    margin-bottom: 30px;
+	box-shadow: var(--shadow);
+}
+.titulo-contacto{
+	font-size: 1.7em;
+	font-family: "Bebas Neue";
+	color: var(--text-color);
+	padding: 15px;
+}
+.contacto a{
+	text-decoration: none;
+    font-family: "Handjet";
+    font-weight: 500;
+    font-size: 1.4em;
+    padding-left: 20px;
+    color: var(--text-color);
+}
+
+
+/*media queries para hacerlo responsive*/
+
+/*si la ventana mide máximo 800px*/
+
+@media screen and (max-width:800px){
+	/*estilo primera pantalla*/
+	.portada h1{
+   		font-size: 8em;
+	}
+	.portada p{
+    	font-size: 2em;
+	}
+	.encabezado{
+		font-size: 2em;
+	}
+	/*estilo grid*/
+	.pruebas{
+		display: grid;
+		grid-template-columns: auto auto;
+    	grid-template-rows: repeat(11, auto);
+    	column-gap: 10px;
+    	row-gap: 15px;
+	}
+	.titulo-pruebas{
+		grid-column: 1 / 3;
+		grid-row: 1 / 2;
+	}
+	
+	.texto-pruebas{
+		grid-column: 1 / 3;
+		grid-row: 2 / 3;
+	}
+	.a-florence{
+		grid-column: 1 / 3;
+		grid-row: 3 / 4;
+	}
+	.texto-florence{
+		grid-column: 2 / 3;
+		grid-row: 4 / 5;
+	}
+	.img1{
+		grid-column: 1 / 2;
+		grid-row: 4 / 5;
+	}
+	.a-FC{
+		grid-column: 1 / 3;
+		grid-row: 5 / 6;
+	}
+	.texto-FC{
+		grid-column: 2 / 3;
+		grid-row: 6 / 7;
+	}
+	.img2{
+		grid-column: 1 / 2;
+		grid-row: 6 / 7;
+	}
+	.a-MP{
+		grid-column: 1 / 3;
+		grid-row: 7 / 8;
+	}
+	.texto-MP{
+		grid-column: 2 / 3;
+		grid-row: 8 / 9;
+	}
+	.img3{
+		grid-column: 1 / 2;
+		grid-row: 8 / 9;
+	}
+	.a-cuadrados{
+		grid-column: 1 / 3;
+		grid-row: 9 / 10;
+	}
+	.texto-cuadrados{
+		grid-column: 2 / 3;
+		grid-row: 10 / 11;
+	}
+	.img4{
+		grid-column: 1 / 2;
+		grid-row: 10 / 11;
+	}
+	.pruebas a{
+		width: 95%;
+	}
+} 
+
+/*si la ventana mide máximo 500px*/
+
+@media screen and (max-width:500px){
+	/*estilo primera pantalla*/
+	.portada h1{
+    font-size: 6em;
+	}
+	.portada p{
+    font-size: 1em;
+	}
+	/*estilo contenedor principal*/
+	.main{
+		width: 80%;
+	}
+	.encabezado{
+		letter-spacing: 2px;
+	}
+	nav a{
+		box-sizing: border-box;
+		padding: 2px 3px;
+		font-size: 1.1em;
+	}
+	.titulo-intro,
+	.titulo-pruebas,
+	.titulo-contacto{
+		font-size: 1.3em;
+	}
+}

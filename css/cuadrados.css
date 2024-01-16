@@ -1,0 +1,128 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+h1{
+	margin-bottom: 30px;
+}
+.caja{
+	width:300px;
+	height:300px;
+	background-color:white;
+	position:relative;
+}
+.cuadrado{
+	width:100px;
+	height:100px;
+
+}
+section{
+	width:100px;
+	height:100px;
+	overflow:hidden;
+}
+
+.uno{
+	background-color: red;
+	left:100px;
+	position: relative;
+}
+section.primera{
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.dos{
+	background-color: blue;
+	left:100px;
+	position: relative;
+}
+section.segunda{
+	right:100px;
+	top:0px;
+	position:absolute;
+}
+
+.tres{
+	background-color: yellow;
+	left:100px;
+	position: relative;
+}
+section.tercera{
+	right:0px;
+	top:0px;
+	position:absolute;
+}
+.cuatro{
+	background-color: purple;
+	left:100px;
+	position: relative;
+}
+section.cuarta{
+	left:0px;
+	top:100px;
+	position:absolute;
+}
+.cinco{
+	background-color: orange;
+	left:100px;
+	position: relative;
+}
+section.quinta{
+	right:100px;
+	top:100px;
+	position:absolute;
+}
+.seis{
+	background-color: lime;
+	left:100px;
+	position: relative;
+}
+section.sexta{
+	right:0px;
+	top:100px;
+	position:absolute;
+}
+.siete{
+	background-color: cyan;
+	left:100px;
+	position: relative;
+}
+section.septima{
+	left:0px;
+	top:200px;
+	position:absolute;
+}
+.ocho{
+	background-color: yellowgreen;
+	left:100px;
+	position: relative;
+}
+section.octava{
+	right:100px;
+	top:200px;
+	position:absolute;
+}
+.nueve{
+	background-color: brown;
+	left:100px;
+	position: relative;
+}
+section.novena{
+	right:0px;
+	top:200px;
+	position:absolute;
+}
+section:hover div{
+	left:0;
+	transition:2s;
+}
+
